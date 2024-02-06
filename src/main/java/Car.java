@@ -1,9 +1,8 @@
 import java.util.ArrayList;
 
 public class Car {
-    public int height = 160;
-    ArrayList<Door> doors = new ArrayList<Door>();
-
+    int height = 160;
+    ArrayList<Door> doors = new ArrayList<>();
     public Car() {
         doors.add(new Door());
         doors.add(new Door());
@@ -11,9 +10,16 @@ public class Car {
         doors.add(new Door());
     }
 
-    public class Door {
-        public int getHeight(){
-            return (int) (height * 0.8);
-        }
+    public static Door createDoor(){
+        Car car = new Car();
+        return car.new Door();
+    }
+
+    class Door {
+        int width;
+        int height;
+//        public int getheight(){
+//            return (int) (height * 0.8);
+//        }
     }
 }
