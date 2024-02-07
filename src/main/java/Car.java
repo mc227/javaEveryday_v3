@@ -1,25 +1,24 @@
 import java.util.ArrayList;
 
-public class Car {
-    int height = 160;
-    ArrayList<Door> doors = new ArrayList<>();
-    public Car() {
-        doors.add(new Door());
-        doors.add(new Door());
-        doors.add(new Door());
-        doors.add(new Door());
-    }
+public class Car
+{
+    int width, height;
 
-    public static Door createDoor(){
-        Car car = new Car();
-        return car.new Door();
-    }
+    public class Door
+    {
+        int width, height;
 
-    class Door {
-        int width;
-        int height;
-//        public int getheight(){
-//            return (int) (height * 0.8);
-//        }
+        public void setHeight(int height)
+        {
+            this.height = height;
+        }
+
+        public int getHeight()
+        {
+            if (height != 0)
+                return this.height;
+            else
+                return (int)(Car.this.height * 0.8);
+        }
     }
 }
