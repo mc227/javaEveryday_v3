@@ -32,24 +32,20 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-
+        new Solution().refresh();
     }
 
     private class TaskDataProvider implements DbDataProvider {
         @Override
         public void refreshAllData(Map criteria) {
-            /*The refreshAllData method in the
-            TaskDataProvider class must save
-            the result of the MockDB
-            class's getFakeTasks method in the tasks list.*/
-
+            tasks = MockDB.getFakeTasks(criteria);
         }
     }
 
     private class NameDataProvider implements DbDataProvider {
         @Override
         public void refreshAllData(Map criteria) {
-
+            names = MockDB.getFakeNames(criteria);
         }
     }
 }
