@@ -8,8 +8,4 @@ Inner 3
 import java.util.List;
 import java.util.Map;
 
-public class Solution {
-    class Task{
-
-    }
-}
+public class Solution {}
