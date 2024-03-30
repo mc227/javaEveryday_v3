@@ -9,7 +9,4 @@ public class MockView {
 	public static Map getFakeTaskCriteria() {
 		return FAKE_TASK_CRITERIA;
 	}
-	public static Map getFakeNameCriteria(){
-		return FAKE_NAME_CRITERIA;
-	}
 }
